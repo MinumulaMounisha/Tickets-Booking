@@ -1,0 +1,27 @@
+<!--CONTENT-->
+<div class="wrapper">
+    <div class="card">
+      <div class="title">Cart ({{cartService.elementInCart()}}) </div>
+      <div class="content">
+
+        <div *ngFor="let scart of cartService.getCarts()" class="horiz-grid separator">
+          <div class="font-medium">{{scart.theater.name}}</div>
+          <div>{{scart.seats.label}}</div>
+          <div>{{ scart.seats.price | currency: 'EUR' }}</div>
+          <div><i class="icon ion-ios-trash" (click)="removeCart(scart)"></i></div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <div class="horiz-grid">
+          <div></div>
+          <em>{{cartService.elementInCart()}} element{{cartService.elementInCart() === 1 ? 'o' : 'i'}} per un totale di {{ cartService.totalCart() | currency: 'EUR' }}</em>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+

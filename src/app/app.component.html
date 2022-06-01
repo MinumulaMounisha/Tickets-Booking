@@ -1,0 +1,22 @@
+  <!--navigation bar-->
+  <div class="navigation">
+    <div class="horiz-grid">
+      <div class="logo">BOOKING</div>
+      <div class="horiz-grid">
+        <span class="btn" routerLink="Home" routerLinkActive="active">HOME</span>
+        <span class="btn" routerLink="search" routerLinkActive="active">SEARCH</span>
+        <span class="btn" routerLink="cart" routerLinkActive="active">
+          CART ({{cartService.elementInCart()}})
+        </span>
+        <span class="btn" routerLink="Bookings" routerLinkActive="active">
+          BOOKINGS 
+        </span>
+        <span class="btn" routerLink="MyBookings" routerLinkActive="active">
+          My BOOKINGS 
+        </span>
+        <span class="btn" (click)="doLogin()" routerLinkActive="active">{{loginService.datiLogin().name ? 'Logout' : 'Login'}}</span>
+      </div>
+      <em>{{loginService.datiLogin().name ? loginService.datiLogin().name: 'Utente'}}</em>
+    </div>
+  </div>  
+<router-outlet></router-outlet>

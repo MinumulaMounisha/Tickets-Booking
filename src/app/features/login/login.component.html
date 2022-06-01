@@ -1,0 +1,16 @@
+ <!--CONTENT-->
+ <div class="wrapper centered">
+    <div class="card vh-centered">
+      <div class="title">Login</div>
+      <div class="content">
+
+        <form #f="ngForm" (ngSubmit)="logga(f)">
+          <input type="text" name="user" [ngModel] placeholder="Username">
+          <input type="password" name="password" [ngModel] placeholder="password">
+          <button type="submit">SIGN-IN</button>
+        </form>
+      </div>
+    </div>
+
+
+</div>

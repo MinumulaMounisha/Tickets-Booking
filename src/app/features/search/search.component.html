@@ -1,0 +1,48 @@
+
+<!--CONTENT-->
+<div class="wrapper three-cols">
+    <!--SIDEBAR-->
+  
+    <app-card title="Ricerca" cardClass="side-bar scrollable" contentClass="content">
+  
+      <app-search-theater [movieSearched]="movieSearched" (searchTheater)="searchTheater($event)">
+      </app-search-theater>
+      <div class="separator"></div>
+      <app-search-theaterlist [movieSearched]="movieSearched" [theaterSelected]="theaterSelected" [theaters]="theaters"
+        (selTheater)="selTheater($event)"></app-search-theaterlist>
+    </app-card>
+  
+ 
+
+    <!--INFO BOX-->
+      <app-card cardClass="" contentClass="content center">
+        <app-search-stars [theaterSelected]="theaterSelected"></app-search-stars>
+        <br>
+        <app-search-seats [theaterSelected]="theaterSelected" (addToCart)="addToCart($event)"></app-search-seats>
+      </app-card>
+  
+    <!--IMAGE GALLERY-->
+     <app-card cardClass="gallery scrollable">
+      <app-search-images [theaterSelected]="theaterSelected" [imgMain]="imgMain" (changeImg)="changeImg($event)">
+      </app-search-images>
+    </app-card>
+
+    <!--MAP-->
+    <app-card cardClass="map">
+      <app-search-map [theaterSelected]="theaterSelected"></app-search-map>
+    </app-card>
+
+   
+  
+    <!--SERVICES-->
+    <app-card title="Servizi" cardClass="services scrollable">
+      <app-search-services [theaterSelected]="theaterSelected"></app-search-services>
+    </app-card>
+  
+  
+    <!--CONTACT FORM-->
+    <!-- <app-card title="Contattaci" cardClass="contact" contentClass="content">
+      <app-search-contact (sendMail)="sendMail($event)"></app-search-contact>
+    </app-card> -->
+  
+  </div>

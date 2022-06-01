@@ -1,0 +1,75 @@
+
+.card1{
+    float:right;
+    width: 16rem;
+    height: 2.5rem;   
+    text-align:center;
+    margin-right: 1.5rem;
+   /*  padding-top: 1rem;  */
+    text-decoration: black;  
+    background-color: rgb(125, 248, 53);  
+}
+
+.card2{
+    float:right;
+    width: 18rem;
+    height: 2.5rem;   
+    text-align:center;
+    margin-right: 1.5rem;
+    padding-top: 0.5rem; 
+    text-decoration: rgb(141, 15, 15);   
+    background-color: rgb(240, 237, 52); 
+}
+
+.card{
+    margin-left: 30px; 
+    padding-bottom: 25px;
+    background: rgb(224, 190, 157);    
+}
+
+.img{
+    width: 55rem;
+    height: 25rem;
+    padding-left: 1.5rem;
+}
+
+.reg-form{
+    margin: 10 10;
+    padding-top: 15rem;
+    text-align: left;
+    display: flex;
+}
+
+.r1{
+    margin-top: 5rem;
+    padding-top: 10rem;
+}
+
+.row{
+    padding: 1rem 0rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+.form-group{
+    text-decoration: white;
+}
+
+button[type=submit]{
+    width: 65%;
+    padding: 8px 15px;
+    background-color: rgb(5, 238, 160);
+    margin-left: 3rem;
+}
+
+button[type=button]{
+    width:50%;
+    padding: 8px 13px;
+    background-color: rgb(109, 165, 250);
+    margin-left: 4rem;
+}
+
+input[type=text]{
+    Margin-left:0.5rem;
+    width: auto;
+}

@@ -1,0 +1,26 @@
+<div class="wrapper">
+    <div class="card">
+      <div class="title">My Bookings </div>
+      <div class="content">
+
+        <div *ngFor="let Ticket of myBookingService.getMyBooking()" class="horiz-grid separator">
+          <div class="font-medium">{{ Ticket.theater.name }}</div>
+          <div>{{ Ticket.seats.label }}</div>
+          <div>{{ Ticket.seats.price | currency: 'EUR' }}</div>
+          <div><i class="icon ion-ios-trash" (click)="removeMyBooking(Ticket)"></i></div>
+        </div>
+
+        <!-- <app-payment></app-payment> -->
+        <br>
+        <br>
+        <br>
+        <div class="horiz-grid">
+          <div></div>
+          <em>{{myBookingService.elementInMyBooking()}} Ticket{{myBookingService.elementInMyBooking() === 1 ? '' : 's'}} for a total of {{ myBookingService.totalMyBooking() | currency: 'EUR' }}</em>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>

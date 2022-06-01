@@ -1,0 +1,106 @@
+
+<!-- <div class=" card wrapper two-cols"> -->
+  <br>
+  <div class="row bg-light">
+    <div class="col">
+      <form class="form-horizontal" [formGroup]="myForm" (ngSubmit)="onSubmit()" novalidate>
+        <div class="form-row">
+            <div class="form-group">
+              <br>
+              <h3>Book For</h3>
+              <label for="inputDate">Date</label>
+              <input type="date" formControlName="date" class="form-control" id="inputDate" placeholder="Data gg/mm/aaaa">
+              <div *ngIf="m.date.touched && m.date.errors" class="invalid-feedback">
+                <div *ngIf="m.date.errors.required">Date is required</div>
+              </div>
+            </div>
+            <br>
+            <div class="form-group">
+              <h3>Details</h3>
+              <label for="inputName" class="control-label">Name</label>              
+              <input type="text" formControlName="name" class="form-control" id="inputName" placeholder="Name">
+              <div *ngIf="m.name.touched && m.name.errors" class="invalid-feedback">
+                <div *ngIf="m.name.errors.required">Name is required</div>
+                <div *ngIf="m.name.errors.minlength">Name must be at least 6 characters</div>
+                <div *ngIf="m.name.errors.maxlength">Name must not exceed 20 characters</div>
+              </div>
+            </div>         
+  <br>
+            <div class="form-group">
+              <label for="inputEmail"> Email</label>
+              <input type="text" formControlName="email" class="form-control" id="inputEmail" placeholder="Email">
+              <div *ngIf="m.email.touched && m.email.errors" class="invalid-feedback">
+                <div *ngIf="m.email.errors.required">Email is required</div>
+                <div *ngIf="m.email.errors.email">Email is invalid</div>
+              </div>
+            </div>
+  <br>
+          <div class="form-group">
+              <label>Mobile number: </label>
+              <input type="text" formControlName="mob" class="form-control">           
+            <div *ngIf="m.mob.touched && m.mob.invalid" class="alert alert-danger">
+                <div *ngIf="m.mob.errors?.required">Please enter mobile number</div>
+                <div *ngIf="m.mob.errors?.pattern">Mobile number is not 10 digit</div>
+            </div>
+          </div>
+  <br>
+            <div class="form-group">
+              <label for="inputNumber">Number of Tickets</label>
+              <input type="number" class="form-control" id="inputNumber" placeholder="Number of Tickets">
+            </div>
+  <br>
+        </div>
+         <!--  <div class="row"> -->
+           <!--  <div class="btn">             
+              <button type="submit" [disabled]="!myForm.valid" class="btn btn-secondary btn-block" routerLink="Payment" routerLinkActive="active">BOOK</button>
+            </div> -->
+
+            <button type="submit" (click)="toggle()" id="bt">BOOK</button>
+
+            <ng-container *ngIf="show">   
+            <br>
+              <div class="card">
+                <div>
+                  <br>
+                  <h3>Payment Details</h3>
+                  <br>
+                  <label for="inputNumber">Card Number</label>
+                  <input type="text" class="form-control" placeholder="card number">
+              </div>
+              <br>
+              <div>
+                  <label for="inputNumber">Expiry Month</label>
+                  <input type="text" class="form-control" placeholder="expiry month">
+              </div>
+              <br>
+              <div>
+                  <label for="inputNumber">Expiry Year</label>
+                  <input type="text" class="form-control" placeholder="expiry year">
+              </div>
+              <br>
+            
+              <div>
+                  <label for="inputNumber">CVC</label>
+                  <input type="text" class="form-control" placeholder="cvc">
+              </div>
+              <br>
+            
+              <div class="row">
+                <button type="button" click="btnClick()">PAY</button>
+                  <!-- <span class=btn color="dark" click="btnClick()">Pay</span> -->
+              </div>
+              <!-- <br>
+                  <h3>Payment Successfull</h3> -->
+              </div>
+            
+            </ng-container>
+
+          <!-- </div> -->
+
+          <br>
+          <br>
+   
+      </form>
+    </div>
+  </div>
+<!-- </div> -->
